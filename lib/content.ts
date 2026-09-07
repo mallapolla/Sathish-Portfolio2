@@ -1,5 +1,6 @@
 export const profile = {
   name: "Sathish Mallapolla",
+  initials: "SM",
   role: "Software Engineer | Full Stack Developer | AI Developer",
   email: "sathishmallapolla125@gmail.com",
   location: "Hyderabad, India",
@@ -12,14 +13,14 @@ export const social = {
 } as const;
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Certifications", href: "#certifications" },
   { label: "Skills", href: "#skills" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Contact", href: "#contact" },
 ] as const;
+
+export const heroEditorialWords = ["BUILD", "CREATE", "SOLVE", "IMPACT"] as const;
 
 export const projects = [
   {
@@ -112,14 +113,47 @@ export const experience = {
   ],
 } as const;
 
+export const engineeringPanels = [
+  {
+    number: "01",
+    title: "Full Stack Development",
+    description:
+      "End-to-end applications from React frontends to Django and Node.js backends, with clean API design and responsive interfaces.",
+  },
+  {
+    number: "02",
+    title: "AI & Machine Learning",
+    description:
+      "Agentic AI systems, RAG pipelines, LLM integrations, and ML models deployed in production with measurable accuracy.",
+  },
+  {
+    number: "03",
+    title: "Backend Systems",
+    description:
+      "Scalable REST APIs, authentication layers, data validation, and caching — built for performance under real-world load.",
+  },
+  {
+    number: "04",
+    title: "Database Engineering",
+    description:
+      "Relational and document databases designed with proper indexing, query optimization, and migration strategies.",
+  },
+  {
+    number: "05",
+    title: "Cloud & DevOps",
+    description:
+      "Docker containers, AWS deployment, CI/CD pipelines, and infrastructure that scales with the product.",
+  },
+] as const;
+
 export const skillGroups = [
   {
     title: "Frontend",
-    items: ["React", "JavaScript", "HTML", "CSS", "Tailwind CSS"],
+    items: ["React", "Next.js", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS"],
   },
   {
     title: "Backend",
-    items: ["Python", "Django", "FastAPI", "Node.js", "REST APIs"],
+    items: ["Python", "Django", "FastAPI", "Node.js", "Laravel", "REST APIs"],
   },
   {
     title: "Database",
@@ -131,7 +165,7 @@ export const skillGroups = [
   },
   {
     title: "Cloud / DevOps",
-    items: ["Git", "GitHub", "Docker", "AWS", "Linux"],
+    items: ["Git", "GitHub", "Docker", "AWS", "CI/CD", "Linux"],
   },
 ] as const;
 

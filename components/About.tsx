@@ -8,65 +8,101 @@ export default function About() {
     <section id="about" className="section-pad relative">
       <div className="container-site grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <p className="kicker mb-6">About</p>
-          <motion.h2
-            initial={{ opacity: 0, y: 24 }}
+          <motion.p
+            initial={{ opacity: 0, y: 8 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="kicker mb-6"
+          >
+            About Me
+          </motion.p>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
             className="editorial text-4xl md:text-6xl lg:text-7xl"
           >
             I don&apos;t just write code.
             <br />
-            I build what&apos;s next.
+            <span className="gold-text-bright">I build what&apos;s next.</span>
           </motion.h2>
-          <div className="mt-8 space-y-5 max-w-xl text-[#b8b8b8] leading-7">
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15, duration: 0.8 }}
+            className="mt-8 space-y-5 max-w-xl text-[#a0a0a0] leading-7"
+          >
             <p>
-              I am Sathish Mallapolla, a software engineer based in Hyderabad. I work across
-              backend systems, applied AI, and full-stack product surfaces — designing
-              architectures that stay clean as they scale.
+              I&apos;m Sathish Mallapolla, a software engineer focused on
+              building scalable applications, intelligent AI systems, and
+              meaningful digital experiences.
             </p>
             <p>
-              My practice sits at the intersection of Python backends, REST APIs, and
-              intelligent systems. I have shipped agentic career tools, HR cost intelligence,
-              and finance prediction products — always with product thinking first, not
-              features for their own sake.
+              My practice sits at the intersection of Python backends, REST
+              APIs, and intelligent systems. I have shipped agentic career
+              tools, HR cost intelligence, and finance prediction products —
+              always with product thinking first, not features for their own
+              sake.
             </p>
             <p>
-              I care about problem solving, measurable performance, and interfaces that make
-              complex systems feel simple. The work is engineering with intention.
+              I care about problem solving, measurable performance, and
+              interfaces that make complex systems feel simple. The work is
+              engineering with intention.
             </p>
-          </div>
-          <ul className="mt-10 grid grid-cols-2 gap-4 max-w-lg">
+          </motion.div>
+
+          <motion.ul
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.25, duration: 0.7 }}
+            className="mt-10 grid grid-cols-2 gap-3 max-w-lg"
+          >
             {qualitativeFocus.map((item) => (
               <li
                 key={item}
-                className="border border-white/8 px-4 py-4 text-[11px] tracking-[0.2em] uppercase text-[#c9a46c]"
+                className="border border-white/[0.08] bg-[#101010]/60 px-4 py-4 text-[10.5px] tracking-[0.22em] uppercase text-[#c9a46c] transition-all duration-400 hover:border-[#c9a46c]/30 hover:bg-[#c9a46c]/[0.04]"
               >
                 {item}
               </li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
 
+        {/* Portrait in premium dark frame */}
         <motion.figure
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto w-full max-w-md"
         >
-          <div className="absolute -inset-6 bg-[radial-gradient(circle,rgba(201,164,108,0.16),transparent_70%)] blur-2xl" />
-          <div className="relative overflow-hidden border border-white/10">
+          {/* Glow behind portrait */}
+          <div className="absolute -inset-8 bg-[radial-gradient(circle,rgba(201,164,108,0.12),transparent_65%)] blur-3xl" />
+
+          {/* Premium frame */}
+          <div className="relative overflow-hidden border border-white/[0.08] bg-[#0b0b0b]">
+            {/* Inner border accent */}
+            <div className="absolute inset-0 border border-[#c9a46c]/[0.08] z-[2] pointer-events-none m-2" />
+
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/profile-original.jpg"
+              src="/images/profile-new.jpg"
               alt="Portrait of Sathish Mallapolla"
-              className="aspect-[4/5] w-full object-cover grayscale-[18%] transition duration-700 hover:grayscale-0 hover:scale-[1.03]"
+              className="aspect-[4/5] w-full object-cover grayscale-[15%] transition-all duration-700 hover:grayscale-0 hover:scale-[1.03]"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505]/50 via-transparent to-transparent" />
+
+            {/* Gradient overlays */}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505]/60 via-transparent to-transparent z-[1]" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#050505]/20 via-transparent to-transparent z-[1]" />
           </div>
-          <figcaption className="mt-4 text-[11px] tracking-[0.22em] uppercase text-[#b8b8b8]">
+
+          <figcaption className="mt-5 text-[10.5px] tracking-[0.22em] uppercase text-[#a0a0a0]">
             Sathish Mallapolla · Hyderabad
           </figcaption>
         </motion.figure>
