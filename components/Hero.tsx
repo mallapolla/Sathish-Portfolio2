@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { ArrowDownRight } from "lucide-react";
+import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { social, heroEditorialWords } from "@/lib/content";
 
 const lines = [
@@ -97,6 +97,7 @@ export default function Hero() {
             </a>
             <Link href="/showcase" className="btn border border-[#c9a46c]/30 text-[#c9a46c] hover:bg-[#c9a46c]/10">
               3D Cinematic View
+              <ArrowUpRight size={15} />
             </Link>
             <a href="#contact" className="btn">
               Let&apos;s connect
