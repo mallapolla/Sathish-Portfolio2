@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 import { ArrowDownRight } from "lucide-react";
 import { social, heroEditorialWords } from "@/lib/content";
 
@@ -94,6 +95,9 @@ export default function Hero() {
               View my work
               <ArrowDownRight size={15} aria-hidden />
             </a>
+            <Link href="/showcase" className="btn border border-[#c9a46c]/30 text-[#c9a46c] hover:bg-[#c9a46c]/10">
+              3D Cinematic View
+            </Link>
             <a href="#contact" className="btn">
               Let&apos;s connect
             </a>
