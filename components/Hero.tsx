@@ -198,7 +198,7 @@ export default function Hero() {
               <img
                 src="/images/walking-developer.png"
                 alt="Sathish Mallapolla walking forward in a dark cinematic studio"
-                className="relative z-[1] mx-auto h-[85vh] lg:h-[92vh] w-auto max-w-none object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
+                className="relative z-[1] mx-auto h-[50vh] sm:h-[65vh] md:h-[75vh] lg:h-[92vh] w-full max-w-full lg:w-auto lg:max-w-none object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
               />
 
               {/* Bottom fade */}

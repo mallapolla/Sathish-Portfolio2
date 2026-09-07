@@ -90,7 +90,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
-            className="lg:hidden border-t border-white/[0.06] bg-[#050505]/97 backdrop-blur-xl px-6 py-10"
+            className="lg:hidden border-t border-white/[0.06] bg-[#050505]/97 backdrop-blur-xl px-6 py-10 max-h-[calc(100svh-70px)] overflow-y-auto"
             aria-label="Mobile"
           >
             <div className="flex flex-col gap-6">
