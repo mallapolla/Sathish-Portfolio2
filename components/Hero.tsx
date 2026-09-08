@@ -3,8 +3,8 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import { social, heroEditorialWords } from "@/lib/content";
+import { ArrowDownRight, ArrowUpRight, FileText } from "lucide-react";
+import { social, heroEditorialWords, profile } from "@/lib/content";
 
 const lines = [
   { text: "BUILDING", gold: false },
@@ -53,7 +53,7 @@ export default function Hero() {
             transition={{ delay: 0.8, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="kicker mb-8"
           >
-            Software Engineer • AI • Full Stack
+            Software Engineer • Python Backend • AI/ML • RAG • Agentic AI
           </motion.p>
 
           <h1 className="editorial text-[12.5vw] sm:text-[4.1rem] md:text-[5.0rem] lg:text-[5.2rem] xl:text-[6.0rem]">
@@ -81,27 +81,35 @@ export default function Hero() {
             transition={{ delay: 1.5, duration: 0.8 }}
             className="mt-8 max-w-lg text-[15px] leading-7 text-[#a0a0a0] md:text-base"
           >
-            I build scalable software, intelligent AI systems, and digital
-            products that turn complex problems into simple experiences.
+            I build production-ready Python backend systems, AI-powered applications,
+            RAG pipelines, agentic workflows, and scalable full-stack products deployed
+            to the cloud.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.7, duration: 0.8 }}
-            className="mt-10 flex flex-col gap-3 sm:flex-row"
+            className="mt-10 flex flex-wrap gap-3"
           >
             <a href="#projects" className="btn btn-gold">
               View my work
               <ArrowDownRight size={15} aria-hidden />
             </a>
+            <a
+              href={profile.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn border border-[#f5f5f5]/20 text-[#f5f5f5] hover:border-[#c9a46c]/50 hover:text-[#c9a46c]"
+              aria-label="Download Resume (opens in new tab)"
+            >
+              <FileText size={14} aria-hidden />
+              Resume
+            </a>
             <Link href="/showcase" className="btn border border-[#c9a46c]/30 text-[#c9a46c] hover:bg-[#c9a46c]/10">
               3D Cinematic View
               <ArrowUpRight size={15} />
             </Link>
-            <a href="#contact" className="btn">
-              Let&apos;s connect
-            </a>
           </motion.div>
 
           <motion.div
@@ -139,11 +147,10 @@ export default function Hero() {
             className="absolute -right-2 top-[12%] z-10 hidden lg:flex flex-col items-end gap-4"
           >
             <div className="gold-vline h-12 mr-2" />
-            {heroEditorialWords.map((word, i) => (
+            {heroEditorialWords.map((word) => (
               <span
                 key={word}
                 className="text-[10px] tracking-[0.35em] uppercase text-[#c9a46c]/60 font-display"
-                style={{ transitionDelay: `${2.2 + i * 0.1}s` }}
               >
                 {word}
               </span>
@@ -182,18 +189,6 @@ export default function Hero() {
             <div className="pointer-events-none absolute inset-y-10 -right-6 w-28 bg-[linear-gradient(90deg,transparent,rgba(201,164,108,0.14),transparent)] blur-xl" />
 
             <div className="relative">
-              {/* Video slot — ready for future walking video */}
-              {/* <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="relative z-[1] mx-auto h-[62vh] max-h-[740px] w-auto object-contain object-bottom drop-shadow-[0_30px_50px_rgba(0,0,0,0.65)] sm:h-[70vh] lg:h-[80vh]"
-              >
-                <source src="/images/walking-developer.mp4" type="video/mp4" />
-              </video> */}
-
-              {/* Static image fallback */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/walking-developer.png"

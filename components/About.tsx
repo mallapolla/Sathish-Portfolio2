@@ -38,21 +38,21 @@ export default function About() {
             className="mt-8 space-y-5 max-w-xl text-[#a0a0a0] leading-7"
           >
             <p>
-              I&apos;m Sathish Mallapolla, a software engineer focused on
-              building scalable applications, intelligent AI systems, and
-              meaningful digital experiences.
+              I&apos;m Sathish Mallapolla, a Software Engineer focused on Python backend
+              systems, AI/ML, and full-stack product development. I build systems that are
+              designed for production from day one — not just demos.
             </p>
             <p>
-              My practice sits at the intersection of Python backends, REST
-              APIs, and intelligent systems. I have shipped agentic career
-              tools, HR cost intelligence, and finance prediction products —
-              always with product thinking first, not features for their own
-              sake.
+              My engineering practice spans Django and FastAPI backends, REST API design
+              with JWT authentication, RAG pipelines, agentic AI workflows using Claude and
+              Gemini, and ML model training with Scikit-learn and Pandas. I have deployed
+              real products to AWS with Docker, served 100+ concurrent users, and optimized
+              API response times from 350ms down to 210ms.
             </p>
             <p>
-              I care about problem solving, measurable performance, and
-              interfaces that make complex systems feel simple. The work is
-              engineering with intention.
+              I work at the intersection of intelligent systems and software engineering —
+              building scalable backends that power AI features, not bolt-on AI onto
+              fragile code. The work is always product-thinking first, engineering second.
             </p>
           </motion.div>
 
@@ -61,12 +61,12 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.25, duration: 0.7 }}
-            className="mt-10 grid grid-cols-2 gap-3 max-w-lg"
+            className="mt-10 grid grid-cols-2 gap-3 max-w-lg sm:grid-cols-3"
           >
             {qualitativeFocus.map((item) => (
               <li
                 key={item}
-                className="border border-white/[0.08] bg-[#101010]/60 px-4 py-4 text-[10.5px] tracking-[0.22em] uppercase text-[#c9a46c] transition-all duration-400 hover:border-[#c9a46c]/30 hover:bg-[#c9a46c]/[0.04]"
+                className="border border-white/[0.08] bg-[#101010]/60 px-4 py-4 text-[9.5px] tracking-[0.22em] uppercase text-[#c9a46c] transition-all duration-400 hover:border-[#c9a46c]/30 hover:bg-[#c9a46c]/[0.04]"
               >
                 {item}
               </li>
@@ -93,7 +93,7 @@ export default function About() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/profile-new.jpg"
-              alt="Portrait of Sathish Mallapolla"
+              alt="Portrait of Sathish Mallapolla, Software Engineer"
               className="aspect-[4/5] w-full object-cover grayscale-[15%] transition-all duration-700 hover:grayscale-0 hover:scale-[1.03]"
             />
 

@@ -767,3 +767,327 @@ body {
   100% { transform: translateY(0) rotateZ(-0.8deg); }
 }
 
+/* ═══════════════════════════════════════════════════════════
+   WHAT I BUILD CARDS
+   ═══════════════════════════════════════════════════════════ */
+
+.wib-card {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  padding: 2rem;
+  transition: border-color 0.5s ease, background 0.5s ease, transform 0.5s ease;
+  overflow: hidden;
+}
+
+.wib-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201, 164, 108, 0.05), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.wib-card:hover {
+  border-color: var(--line-gold);
+  transform: translateY(-3px);
+}
+
+.wib-card:hover::before {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ENGINEERING METRICS CARDS
+   ═══════════════════════════════════════════════════════════ */
+
+.metric-card {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--bg-1);
+  padding: 2rem;
+  transition: border-color 0.5s ease, background 0.5s ease, transform 0.4s ease;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 0% 0%, rgba(201, 164, 108, 0.05), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.metric-card:hover {
+  border-color: rgba(201, 164, 108, 0.3);
+  transform: translateY(-2px);
+}
+
+.metric-card:hover::before {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PROJECT FEATURED TREATMENT
+   ═══════════════════════════════════════════════════════════ */
+
+.project-featured {
+  background: linear-gradient(180deg, rgba(201, 164, 108, 0.015), transparent 40%);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PROJECT CASE STUDY MODAL
+   ═══════════════════════════════════════════════════════════ */
+
+.case-study-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 60;
+}
+
+.case-study-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 70;
+  width: min(680px, 100vw);
+  background: var(--bg-1);
+  border-left: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.case-study-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+
+.case-study-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.case-study-close:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 164, 108, 0.06);
+}
+
+.case-study-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201, 164, 108, 0.2) transparent;
+}
+
+.case-study-body::-webkit-scrollbar {
+  width: 4px;
+}
+
+.case-study-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.case-study-body::-webkit-scrollbar-thumb {
+  background: rgba(201, 164, 108, 0.2);
+  border-radius: 2px;
+}
+
+.cs-section {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.cs-section:last-child {
+  border-bottom: none;
+}
+
+.cs-section-title {
+  font-size: 0.6rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.cs-text {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--muted);
+}
+
+.cs-arch-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  margin-bottom: 2px;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.cs-arch-row:hover {
+  border-color: rgba(201, 164, 108, 0.2);
+}
+
+.cs-arch-number {
+  font-size: 0.625rem;
+  letter-spacing: 0.15em;
+  color: rgba(201, 164, 108, 0.4);
+  font-family: var(--font-display), system-ui, sans-serif;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.cs-arch-layer {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text);
+}
+
+.cs-arch-tech {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.cs-arch-arrow {
+  position: absolute;
+  bottom: -14px;
+  left: 2rem;
+  font-size: 0.7rem;
+  color: rgba(201, 164, 108, 0.4);
+  z-index: 1;
+  line-height: 1;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FOCUS VISIBLE — Keyboard navigation
+   ═══════════════════════════════════════════════════════════ */
+
+:focus-visible {
+  outline: 2px solid rgba(201, 164, 108, 0.7);
+  outline-offset: 3px;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS IMPROVEMENTS
+   ═══════════════════════════════════════════════════════════ */
+
+/* Case study panel — full width on mobile */
+@media (max-width: 640px) {
+  .case-study-panel {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    border-left: none;
+    border-top: 1px solid var(--line);
+    top: auto;
+    bottom: 0;
+    height: 92svh;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .case-study-header {
+    padding: 1.5rem 1.25rem 1rem;
+  }
+
+  .case-study-body {
+    padding: 1rem 1.25rem 2rem;
+  }
+
+  .cs-arch-row {
+    padding: 0.6rem 0.75rem;
+  }
+
+  /* WhatIBuild single column on very small */
+  .wib-card {
+    padding: 1.5rem;
+  }
+
+  /* Metric cards */
+  .metric-card {
+    padding: 1.5rem;
+  }
+
+  /* Reduce editorial heading sizes on small mobile */
+  .editorial {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Section padding reduction on xs */
+  .section-pad {
+    padding: 4rem 1.25rem;
+  }
+
+  /* Eng panels */
+  .eng-panel {
+    padding: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Prevent any overflow from oversized headings */
+  h1, h2, h3 {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* Buttons wrap nicely */
+  .btn {
+    min-height: 46px;
+    padding: 0.75rem 1.2rem;
+    font-size: 0.65rem;
+  }
+
+  /* Contact heading */
+  #contact .editorial {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+  }
+}
+
+/* Tablet responsive improvements */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .case-study-panel {
+    width: min(520px, 92vw);
+  }
+}
+
+/* Prevent horizontal scroll — belt and suspenders */
+@media (max-width: 1024px) {
+  body, main {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+

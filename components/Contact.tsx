@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
-import { social } from "@/lib/content";
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { social, profile } from "@/lib/content";
 
 export default function Contact() {
   return (
@@ -27,7 +27,7 @@ export default function Contact() {
         >
           Let&apos;s build
           <br />
-          <span className="gold-text-bright">something great.</span>
+          <span className="gold-text-bright">something intelligent.</span>
         </motion.h2>
 
         <motion.p
@@ -37,9 +37,8 @@ export default function Contact() {
           transition={{ delay: 0.1, duration: 0.7 }}
           className="mt-8 max-w-lg text-lg text-[#a0a0a0] leading-7"
         >
-          Have an idea, project, or opportunity?
-          <br />
-          Let&apos;s talk.
+          Open to backend engineering, AI/ML, full-stack, or agentic AI
+          roles. Have a project, idea, or opportunity? Let&apos;s talk.
         </motion.p>
 
         <motion.div
@@ -47,11 +46,11 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.7 }}
-          className="mt-12 flex flex-col gap-3 sm:flex-row"
+          className="mt-12 flex flex-wrap gap-3"
         >
           <a href={social.email} className="btn btn-gold">
             <Mail size={15} aria-hidden />
-            Email me
+            Get in Touch
           </a>
           <a
             href={social.linkedin}
@@ -70,6 +69,16 @@ export default function Contact() {
           >
             <Github size={15} aria-hidden />
             GitHub
+          </a>
+          <a
+            href={profile.resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn border-[#c9a46c]/30 text-[#c9a46c] hover:bg-[#c9a46c]/10 hover:border-[#c9a46c]/60"
+            aria-label="Download Resume (opens in new tab)"
+          >
+            <FileText size={15} aria-hidden />
+            Resume
           </a>
         </motion.div>
       </div>
