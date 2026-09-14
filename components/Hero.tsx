@@ -9,7 +9,7 @@ import { social, heroEditorialWords, profile } from "@/lib/content";
 const lines = [
   { text: "BUILDING", gold: false },
   { text: "INTELLIGENT", gold: true },
-  { text: "DIGITAL", gold: false },
+  { text: "BACKEND & AI", gold: false },
   { text: "EXPERIENCES.", gold: false },
 ];
 
@@ -19,9 +19,6 @@ export default function Hero() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const characterY = useTransform(scrollYProgress, [0, 1], [0, 120]);
-  const characterX = useTransform(scrollYProgress, [0, 1], [0, -20]);
-  const characterScale = useTransform(scrollYProgress, [0, 1], [1, 1.04]);
   const bgY = useTransform(scrollYProgress, [0, 1], [0, 50]);
 
   return (
@@ -44,7 +41,7 @@ export default function Hero() {
         <div className="absolute top-0 right-[15%] w-px h-full bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
       </div>
 
-      <div className="container-site relative z-[2] grid min-h-[100svh] items-end gap-6 px-6 pb-16 pt-28 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-20">
+      <div className="container-site relative z-[2] grid min-h-[100svh] items-end gap-6 px-6 pb-16 pt-28 md:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start lg:content-center lg:pb-20">
         {/* Left column: Text */}
         <div className="max-w-2xl">
           <motion.p
@@ -182,7 +179,6 @@ export default function Hero() {
               ease: [0.22, 1, 0.36, 1],
             }}
             className="relative"
-            style={{ y: characterY, x: characterX, scale: characterScale }}
           >
             {/* Character glow effects */}
             <div className="pointer-events-none absolute -inset-10 rounded-full bg-[radial-gradient(circle,rgba(201,164,108,0.18),transparent_60%)] blur-3xl" />
@@ -193,7 +189,7 @@ export default function Hero() {
               <img
                 src="/images/walking-developer.png"
                 alt="Sathish Mallapolla walking forward in a dark cinematic studio"
-                className="relative z-[1] mx-auto h-[50vh] sm:h-[65vh] md:h-[75vh] lg:h-[92vh] w-full max-w-full lg:w-auto lg:max-w-none object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
+                className="relative z-[1] mx-auto lg:ml-auto lg:mr-0 h-[45vh] sm:h-[55vh] md:h-[65vh] lg:h-auto w-full max-w-full lg:w-[90%] xl:w-[85%] object-contain object-top drop-shadow-[0_30px_60px_rgba(0,0,0,0.7)]"
               />
 
               {/* Bottom fade */}
